@@ -508,7 +508,7 @@ LR_in_features=features_per_window+embedding_dim+embedding_dim
 device = "cuda:0" if torch.cuda.is_available() else "cpu"
 
 model = timesnet().to(device)
-model.load_state_dict(torch.load("/home/c_yeung/workspace6/python/soccer_challenge_23/final_model_2/model_44_param/final_44_41.pt"))
+model.load_state_dict(torch.load("/final_44_41.pt"))
 
 data_out=pd.DataFrame(columns=validation_set.columns)
 #get the features for first row in prediction set
