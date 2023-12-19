@@ -6,7 +6,7 @@ The repo for the paper Yeung C., et al. (2023) "Evaluating Soccer Match Predicti
 ```
 python dataset_splitting_final.py
 ```
-2. Calculate the Berra ratings
+2. Calculate the Berra ratings_param
 ```
 python berrar_rating.py
 ```
