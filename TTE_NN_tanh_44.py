@@ -41,12 +41,10 @@ if testing==True:
     print("In testing mode")
 
 #%%%
-if server!=True:
-    data_path="C:/Users/calvi/Desktop/2023 soccer prediction challenge/"
-    result_path="C:/Users/calvi/Desktop/2023 soccer prediction challenge/"
-elif  server==True:
-    data_path="/data_pool_1/soccer-pred-23/"
-    result_path="/home/c_yeung/workspace6/python/soccer_challenge_23/"
+
+data_path="/2023 soccer prediction challenge/"
+result_path="/2023 soccer prediction challenge/"
+
 
 #%% hyperparameters
 if testing==False:
@@ -487,9 +485,9 @@ if __name__ == '__main__':
                                     train_loss,train_time,trainable_params_num,model_params=model_train(epochs)
                                     #valid_loss=pd.DataFrame(valid_loss)
                                     train_time_num_params=pd.DataFrame([train_time,trainable_params_num]).T
-                                    train_loss.to_csv(f"/home/c_yeung/workspace6/python/soccer_challenge_23/final_model_2/train_loss_44.csv",index=False)
+                                    train_loss.to_csv(f"/soccer_challenge_23/final_model_2/train_loss_44.csv",index=False)
                                     for i in model_params.keys():
-                                        torch.save(model_params[i], f"/home/c_yeung/workspace6/python/soccer_challenge_23/final_model_2/model_44_param/final_44_{i}.pt")
+                                        torch.save(model_params[i], f"/soccer_challenge_23/final_model_2/model_44_param/final_44_{i}.pt")
             
             
             
