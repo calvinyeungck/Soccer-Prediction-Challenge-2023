@@ -1386,8 +1386,8 @@ def current_form(dataframe,n=5):
 
 
 if __name__ == '__main__':
-    df=pd.read_excel("C:/Users/calvi/Desktop/2023 soccer prediction challenge/TrainingSet_2023_02_08.xlsx")
-    prediction_set=pd.read_excel("C:/Users/calvi/Desktop/2023 soccer prediction challenge/PredictionSet_2023_01_31.xlsx")
+    df=pd.read_excel("TrainingSet_2023_02_08.xlsx")
+    prediction_set=pd.read_excel("PredictionSet_2023_01_31.xlsx")
     #% check number of match and leagure in each season
 
     # for i in df.Sea.unique():
