@@ -90,11 +90,11 @@ LR_out_features=3
 #%%
 
 flag="5yr"
-df=pd.read_csv("/data_pool_1/soccer-pred-23/final/dataset/trainset_22-23_exact_44.csv")
+df=pd.read_csv("trainset_22-23_exact_44.csv")
 df=df.drop(columns=('Round'))
 df=df.drop(columns=('index'))
 
-additional_df=pd.read_csv("/data_pool_1/soccer-pred-23/final/dataset/Matches2Add.csv")
+additional_df=pd.read_csv("Matches2Add.csv")
 additional_df=additional_df.dropna()
 
 # pdb.set_trace()
@@ -103,19 +103,19 @@ df1=df1.reset_index(drop=True) #reset index
 df1=df1.reset_index()
 df1,Berrar_Recencyfeature_team_dict=features_create.Berrar_Recencyfeature_train_final(df1,n=5)
 trainset=df1[:]
-trainset.to_csv("/home/c_yeung/workspace6/python/soccer_challenge_23/final_model_2/prediction/features_data.csv",index=False)
+trainset.to_csv("features_data.csv",index=False)
 ##get the ratings dict and hyperparameters
 team_ratings_dict={}
 berr_para={}
 for i in trainset.Lge.unique():
-    with open(f"/data_pool_1/soccer-pred-23/final/berrar_ratings/{i}_team_ratings_dict.pickle", 'rb') as f:
+    with open(f"{i}_team_ratings_dict.pickle", 'rb') as f:
         team_ratings_dict[i]= pickle.load(f)
-    with open(f"/data_pool_1/soccer-pred-23/final/berrar_ratings/{i}_berrarratings_hyperparameters.pickle", 'rb') as f:
+    with open(f"{i}_berrarratings_hyperparameters.pickle", 'rb') as f:
         berr_para[i]= pickle.load(f)
 
 
 #%% validation set
-validation_set=pd.read_csv("/data_pool_1/soccer-pred-23/final/dataset/validset_22-23_44.csv")
+validation_set=pd.read_csv("validset_22-23_44.csv")
 # validation_set_1=pd.read_csv(data_path+f"split dataset/validset_{year}_{valid_set}_round1.csv")
 # validation_set_2=pd.read_csv(data_path+f"split dataset/validset_{year}_{valid_set}_round2.csv")
 # validation_set_1=validation_set_1.drop(["index"],axis=1)
