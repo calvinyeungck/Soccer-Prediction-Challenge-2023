@@ -38,12 +38,10 @@ if testing==True:
     print("In testing mode")
 
 #%%%
-if server!=True:
-    data_path="C:/Users/calvi/Desktop/2023 soccer prediction challenge/"
-    result_path="C:/Users/calvi/Desktop/2023 soccer prediction challenge/"
-elif  server==True:
-    data_path="/data_pool_1/soccer-pred-23/"
-    result_path="/home/c_yeung/workspace6/python/soccer_challenge_23/"
+
+data_path="/2023 soccer prediction challenge/"
+result_path="/2023 soccer prediction challenge/"
+
 
 #%% hyperparameters
 if testing==False:
@@ -571,7 +569,7 @@ data_out['HS'] = -1
 data_out['AS'] = -1
 data_out['GD'] =  0
 
-data_out.to_csv("/home/c_yeung/workspace6/python/soccer_challenge_23/final_model_2/prediction/prediction_final.csv",index=False)
+data_out.to_csv("prediction_final.csv",index=False)
     
             
             
