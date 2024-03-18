@@ -84,7 +84,7 @@ def Berrar_Recencyfeature_train_final(dataframe,n=9):
                     time_dict_attacking_stength_AT[l+1][temp_df2["index"]]=team_info[temp_df2.AT][1][l]
                     time_dict_defensive_stength_AT[l+1][temp_df2["index"]]=team_info[temp_df2.AT][2][l]
                     time_dict_home_advantage_AT[l+1][temp_df2["index"]]=team_info[temp_df2.AT][3][l]
-                    time_dict_strength_opposition_HT[l+1][temp_df2["index"]]=team_info[temp_df2.AT][4][l]
+                    time_dict_strength_opposition_HT[l+1][temp_df2["index"]]=team_info[temp_df2.HT][4][l]
                     time_dict_strength_opposition_AT[l+1][temp_df2["index"]]=team_info[temp_df2.AT][4][l]
   
                 team_info[temp_df2.HT][4].insert(0,sum([x - y for x, y in zip(team_info[temp_df2.AT][1], team_info[temp_df2.AT][2])])/n)
